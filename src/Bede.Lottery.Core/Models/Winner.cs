@@ -7,8 +7,11 @@ using System.Threading.Tasks;
 
 namespace Bede.Lottery.Core
 {
-	class Employee
+	public class Winner
 	{
-		public string Name { get; set; }
+		public int Id { get; set; }
+		public Employee WinningEmployee { get; set; }
+		public Prize WinningPrize { get; set; }
+		public string PrizeDraw { get; set; }
 	}
 }

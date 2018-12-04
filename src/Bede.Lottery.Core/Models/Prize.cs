@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Bede.Lottery.Core
 {
-	class Winner
+	public class Prize
 	{
-		public Employee WinningEmployee { get; set; }
-		public Prize WinningPrize { get; set; }
+		public int Id { get; set; }
+		public string Name { get; set; }
+		public string Description { get; set; }
 	}
 }

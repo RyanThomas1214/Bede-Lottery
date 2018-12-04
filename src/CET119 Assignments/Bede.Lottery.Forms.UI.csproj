@@ -80,5 +80,18 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bede.Lottery.Core\Bede.Lottery.Core.csproj">
+      <Project>{6d21e023-f774-47a9-8032-90759bf1607a}</Project>
+      <Name>Bede.Lottery.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bede.Lottery.Service\Bede.Lottery.Service.csproj">
+      <Project>{ea32e187-5a91-4e25-804a-eb84845080cb}</Project>
+      <Name>Bede.Lottery.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

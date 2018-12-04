@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bede.Lottery.Forms.UI", "CE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bede.Lottery.Service", "Bede.Lottery.Service\Bede.Lottery.Service.csproj", "{EA32E187-5A91-4E25-804A-EB84845080CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bede.Lottery.Data", "Bede.Lottery.Data\Bede.Lottery.Data.csproj", "{2AF0E911-7BA0-450F-B77B-4F33943557B3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bede.Lottery.Data.Sql", "Bede.Lottery.Data\Bede.Lottery.Data.Sql.csproj", "{2AF0E911-7BA0-450F-B77B-4F33943557B3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bede.Lottery.Core", "Bede.Lottery.Core\Bede.Lottery.Core.csproj", "{6D21E023-F774-47A9-8032-90759BF1607A}"
 EndProject

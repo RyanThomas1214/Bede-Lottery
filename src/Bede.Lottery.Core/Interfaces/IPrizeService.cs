@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bede.Lottery.Core
+namespace Bede.Lottery.Core.Interfaces
 {
-	class Prize
+	public interface IPrizeService
 	{
-		public string Name { get; set; }
-		public int Amount { get; set; }
+		Prize GetPrize(int id);
+		Prize GetRandomPrize();
 	}
 }
