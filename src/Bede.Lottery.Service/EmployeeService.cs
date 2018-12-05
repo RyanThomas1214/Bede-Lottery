@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using Bede.Lottery.Core.Models;
+using Bede.Lottery.Core.Interfaces.Services;
 
 namespace Bede.Lottery.Core
 {
