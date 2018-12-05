@@ -5,7 +5,7 @@ using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bede.Lottery.Core
+namespace Bede.Lottery.Core.Models
 {
 	public class Employee
 	{
