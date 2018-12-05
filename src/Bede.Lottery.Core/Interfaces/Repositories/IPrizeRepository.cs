@@ -1,6 +1,6 @@
 ﻿using Bede.Lottery.Core.Models;
 
-namespace Bede.Lottery.Core.Interfaces
+namespace Bede.Lottery.Core.Interfaces.Repositories
 {
 	public interface IPrizeRepository
 	{

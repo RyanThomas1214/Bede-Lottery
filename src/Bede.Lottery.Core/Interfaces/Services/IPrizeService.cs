@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Bede.Lottery.Core.Models;
 
-namespace Bede.Lottery.Core.Interfaces
+namespace Bede.Lottery.Core.Interfaces.Services
 {
 	public interface IPrizeService
 	{

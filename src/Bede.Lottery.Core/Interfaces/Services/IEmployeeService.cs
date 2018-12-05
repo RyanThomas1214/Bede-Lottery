@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Bede.Lottery.Core
+namespace Bede.Lottery.Core.Interfaces.Services
 {
 	public interface IEmployeeService
 	{

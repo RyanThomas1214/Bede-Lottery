@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bede.Lottery.Core.Interfaces
+namespace Bede.Lottery.Core.Interfaces.Services
 {
 	public interface IWinnersService
 	{

@@ -29,5 +29,6 @@ namespace Bede.Lottery.Data
         public virtual DbSet<Prize> Winners { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Winner> Winners { get; set; }
+	    public virtual DbSet<Prize> Prizes { get; set; }
     }
 }

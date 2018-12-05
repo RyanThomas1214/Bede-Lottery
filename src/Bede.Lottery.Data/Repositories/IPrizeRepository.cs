@@ -3,6 +3,7 @@ using System.Linq;
 using Bede.Lottery.Core.Interfaces;
 using Bede.Lottery.Core.Models;
 using ModelPrize = Bede.Lottery.Core.Models.Prize;
+using Bede.Lottery.Core.Interfaces.Repositories;
 
 namespace Bede.Lottery.Data.Repositories
 {
