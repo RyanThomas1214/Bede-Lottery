@@ -41,14 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\IEmployeeService.cs" />
-    <Compile Include="Interfaces\IPrizeService.cs" />
-    <Compile Include="Interfaces\IWinnersService.cs" />
+    <Compile Include="Interfaces\Repositories\IEmployeeRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IPrizeRepository.cs" />
+    <Compile Include="Interfaces\Services\IEmployeeService.cs" />
+    <Compile Include="Interfaces\Services\IPrizeService.cs" />
+    <Compile Include="Interfaces\Services\IWinnersService.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Prize.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Winner.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
