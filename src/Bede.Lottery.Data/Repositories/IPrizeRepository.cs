@@ -37,7 +37,7 @@ namespace Bede.Lottery.Data.Repositories
 		{
 			using (var context = new bedelotteryEntities())
 			{
-				Prize prize = context.Prizes.Where(p => p.Id == id).FirstOrDefault();
+				Prize prize = context.Prizes.FirstOrDefault(p => p.Id == id);
 				return ConvertFromTableToBusinessObject(prize);
 			}
 		}
@@ -57,7 +57,7 @@ namespace Bede.Lottery.Data.Repositories
 			using (var context = new bedelotteryEntities())
 			{
 				// get db entity
-				Prize dbPrize = context.Prizes.Where(p => p.Id == prize.Id).FirstOrDefault();
+				Prize dbPrize = context.Prizes.FirstOrDefault(p => p.Id == prize.Id);
 
 				// update fields
 				dbPrize.Description = prize.Description;

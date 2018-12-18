@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Interfaces\Repositories\IEmployeeRepository.cs" />
     <Compile Include="Interfaces\Repositories\IPrizeRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IWinnerRepository.cs" />
     <Compile Include="Interfaces\Services\IEmployeeService.cs" />
     <Compile Include="Interfaces\Services\IPrizeService.cs" />
     <Compile Include="Interfaces\Services\IWinnersService.cs" />

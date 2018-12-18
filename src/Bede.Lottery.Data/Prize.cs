@@ -17,7 +17,7 @@ namespace Bede.Lottery.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Prize()
         {
-            this.Winners = new HashSet<Winner>();
+            this.Prizes = new HashSet<Winner>();
         }
     
         public int Id { get; set; }
@@ -25,6 +25,6 @@ namespace Bede.Lottery.Data
         public string Description { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Winner> Winners { get; set; }
+        public virtual ICollection<Winner> Prizes { get; set; }
     }
 }

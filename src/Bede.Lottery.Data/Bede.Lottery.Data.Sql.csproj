@@ -74,6 +74,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\IEmployeeRepository.cs" />
     <Compile Include="Repositories\IPrizeRepository.cs" />
+    <Compile Include="Repositories\IWinnerRepository.cs" />
     <Compile Include="sysdiagram.cs">
       <DependentUpon>bedelotterydatabase.tt</DependentUpon>
     </Compile>

@@ -1,10 +1,9 @@
 ﻿using Bede.Lottery.Core.Models;
 
-namespace Bede.Lottery.Core.Interfaces
+namespace Bede.Lottery.Core.Interfaces.Repositories
 {
 	public interface IWinnerRepository
 	{
-		Prize GetWinner(int id);
-		Prize GetWinningPrize(Prize prize);
+		Winner GetWinner(int id);
 	}
 }
