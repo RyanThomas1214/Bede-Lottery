@@ -26,5 +26,10 @@ namespace Bede.Lottery.Forms.UI
 			_mainForm.Show();
 			Close();
 		}
+
+		private void btnGenerate_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
