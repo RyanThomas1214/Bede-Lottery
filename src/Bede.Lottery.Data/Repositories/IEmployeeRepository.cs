@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Bede.Lottery.Core;
 using Bede.Lottery.Core.Interfaces;
@@ -20,7 +21,15 @@ namespace Bede.Lottery.Data.Repositories
 			}
 		}
 
-		private ModelEmployee ConvertFromTableToBusinessObject(Employee employee)
+		public IEnumerable<ModelEmployee> GetAll()
+		{
+			using (var context = new bedelotteryEntities())
+			{
+				return context.Employees.Select(p => new ModelEmployee { Id = p.Id, Name = p.Name }).ToList();
+			}
+		}
+
+		private static ModelEmployee ConvertFromTableToBusinessObject(Employee employee)
 		{
 			return new ModelEmployee
 			{

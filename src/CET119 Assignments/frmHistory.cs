@@ -13,17 +13,14 @@ namespace Bede.Lottery.Forms.UI
 {
 	public partial class frmHistory : Form
 	{
-		private frmMain _mainForm;
 
-		public frmHistory(frmMain mainForm)
+		public frmHistory()
 		{
-			_mainForm = mainForm;
 			InitializeComponent();
 		}
 
 		private void btnBack_Click(object sender, EventArgs e)
 		{
-			_mainForm.Show();
 			Close();
 		}
 

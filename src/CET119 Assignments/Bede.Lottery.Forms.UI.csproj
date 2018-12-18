@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.8.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.8.1\lib\net45\Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -120,6 +123,10 @@
     <ProjectReference Include="..\Bede.Lottery.Core\Bede.Lottery.Core.csproj">
       <Project>{6d21e023-f774-47a9-8032-90759bf1607a}</Project>
       <Name>Bede.Lottery.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bede.Lottery.Data\Bede.Lottery.Data.Sql.csproj">
+      <Project>{2af0e911-7ba0-450f-b77b-4f33943557b3}</Project>
+      <Name>Bede.Lottery.Data.Sql</Name>
     </ProjectReference>
     <ProjectReference Include="..\Bede.Lottery.Service\Bede.Lottery.Service.csproj">
       <Project>{ea32e187-5a91-4e25-804a-eb84845080cb}</Project>

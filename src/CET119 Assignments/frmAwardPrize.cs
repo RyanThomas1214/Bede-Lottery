@@ -15,40 +15,23 @@ namespace Bede.Lottery.Forms.UI
 {
 	public partial class frmAwardPrize : Form
 	{
-		private readonly frmMain _mainForm;
 		private IWinnersService _winnersService;
 
-		public frmAwardPrize(frmMain mainForm)
+		public frmAwardPrize(IWinnersService winnersService)
 		{
-			_mainForm = mainForm;
+			_winnersService = winnersService;
 			InitializeComponent();
 		}
 
 		private void btnBack_Click(object sender, EventArgs e)
 		{
-			_mainForm.Show();
 			Close();
 		}
 
 		private void btnGenerate_Click(object sender, EventArgs e)
 		{
-			//var winner = _winnersService.ChooseWinner();
-			var winner = new Winner
-			{
-				WinningEmployee = new Employee()
-				{
-					Name = "ryan",
-					Id = 2
-				},
-				WinningPrize = new Prize()
-				{
-					Name = "money",
-					Description = "mint prize"
-				}
-			};
-
-
-
+			var winner = _winnersService.ChooseWinner();
+			
 			//populate employee
 			lblName.Text = winner.WinningEmployee.Name;
 			lblId.Text = winner.WinningEmployee.Id.ToString();

@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Bede.Lottery.Core.Interfaces.Repositories;
 using Bede.Lottery.Core.Models;
 using Bede.Lottery.Core.Interfaces.Services;
 
@@ -6,6 +9,12 @@ namespace Bede.Lottery.Core
 {
 	public class EmployeeService : IEmployeeService
 	{
+		private readonly IEmployeeRepository _employeeRepository;
+
+		public EmployeeService(IEmployeeRepository employeeRepository)
+		{
+			_employeeRepository = employeeRepository;
+		}
 		public Employee GetEmployee(int id)
 		{
 			throw new System.NotImplementedException();
@@ -23,7 +32,8 @@ namespace Bede.Lottery.Core
 
 		public Employee GetRandomEmployee()
 		{
-			throw new System.NotImplementedException();
+			var employees = _employeeRepository.GetAll();
+			return employees.OrderBy(x => Guid.NewGuid()).FirstOrDefault();
 		}
 	}
 }
