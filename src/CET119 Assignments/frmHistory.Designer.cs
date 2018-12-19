@@ -31,7 +31,8 @@
 			this.btnBack = new System.Windows.Forms.Button();
 			this.btnGenerate = new System.Windows.Forms.Button();
 			this.lblTitle = new System.Windows.Forms.Label();
-			this.listBox1 = new System.Windows.Forms.ListBox();
+			this.dgvWinners = new System.Windows.Forms.DataGridView();
+			((System.ComponentModel.ISupportInitialize)(this.dgvWinners)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// btnBack
@@ -51,7 +52,7 @@
 			this.btnGenerate.Name = "btnGenerate";
 			this.btnGenerate.Size = new System.Drawing.Size(346, 77);
 			this.btnGenerate.TabIndex = 4;
-			this.btnGenerate.Text = "Generate";
+			this.btnGenerate.Text = "Refresh";
 			this.btnGenerate.UseVisualStyleBackColor = true;
 			this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
 			// 
@@ -65,26 +66,28 @@
 			this.lblTitle.TabIndex = 11;
 			this.lblTitle.Text = "Previous Winners";
 			// 
-			// listBox1
+			// dgvWinners
 			// 
-			this.listBox1.FormattingEnabled = true;
-			this.listBox1.ItemHeight = 25;
-			this.listBox1.Location = new System.Drawing.Point(95, 350);
-			this.listBox1.Name = "listBox1";
-			this.listBox1.Size = new System.Drawing.Size(1515, 604);
-			this.listBox1.TabIndex = 12;
+			this.dgvWinners.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvWinners.Location = new System.Drawing.Point(138, 368);
+			this.dgvWinners.Name = "dgvWinners";
+			this.dgvWinners.RowTemplate.Height = 33;
+			this.dgvWinners.Size = new System.Drawing.Size(1456, 584);
+			this.dgvWinners.TabIndex = 12;
 			// 
 			// frmHistory
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1695, 1002);
-			this.Controls.Add(this.listBox1);
+			this.Controls.Add(this.dgvWinners);
 			this.Controls.Add(this.lblTitle);
 			this.Controls.Add(this.btnGenerate);
 			this.Controls.Add(this.btnBack);
 			this.Name = "frmHistory";
 			this.Text = "frmHistory";
+			this.Load += new System.EventHandler(this.frmHistory_Load);
+			((System.ComponentModel.ISupportInitialize)(this.dgvWinners)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -95,6 +98,6 @@
 		private System.Windows.Forms.Button btnBack;
 		private System.Windows.Forms.Button btnGenerate;
 		private System.Windows.Forms.Label lblTitle;
-		private System.Windows.Forms.ListBox listBox1;
+		private System.Windows.Forms.DataGridView dgvWinners;
 	}
 }

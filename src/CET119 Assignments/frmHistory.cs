@@ -7,15 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bede.Lottery.Core.Interfaces.Services;
 using CET119_Assignments;
 
 namespace Bede.Lottery.Forms.UI
 {
 	public partial class frmHistory : Form
 	{
+		private readonly IWinnersService _winnersService;
 
-		public frmHistory()
+		public frmHistory(IWinnersService winnersService)
 		{
+			_winnersService = winnersService;
 			InitializeComponent();
 		}
 
@@ -26,6 +29,16 @@ namespace Bede.Lottery.Forms.UI
 
 		private void btnGenerate_Click(object sender, EventArgs e)
 		{
+
+		}
+
+		private void frmHistory_Load(object sender, EventArgs e)
+		{
+			//Get previous Winners
+			var winners = _winnersService.GetWinners();
+			//bind the collection to data grid
+			//update UI?
+
 
 		}
 	}

@@ -40,5 +40,10 @@ namespace Bede.Lottery.Forms.UI
 			lblPrizeName.Text = winner.WinningPrize.Name;
 			lblDescription.Text = winner.WinningPrize.Description;
 		}
+
+		private void frmAwardPrize_Load(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

@@ -48,7 +48,7 @@
 			// 
 			this.btnBack.Location = new System.Drawing.Point(27, 33);
 			this.btnBack.Name = "btnBack";
-			this.btnBack.Size = new System.Drawing.Size(83, 77);
+			this.btnBack.Size = new System.Drawing.Size(117, 63);
 			this.btnBack.TabIndex = 0;
 			this.btnBack.Text = "BACK";
 			this.btnBack.UseVisualStyleBackColor = true;
@@ -57,7 +57,7 @@
 			// btnGenerate
 			// 
 			this.btnGenerate.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnGenerate.Location = new System.Drawing.Point(88, 261);
+			this.btnGenerate.Location = new System.Drawing.Point(168, 253);
 			this.btnGenerate.Name = "btnGenerate";
 			this.btnGenerate.Size = new System.Drawing.Size(346, 77);
 			this.btnGenerate.TabIndex = 3;
@@ -79,7 +79,7 @@
 			// 
 			this.lblPrize.AutoSize = true;
 			this.lblPrize.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblPrize.Location = new System.Drawing.Point(292, 443);
+			this.lblPrize.Location = new System.Drawing.Point(378, 443);
 			this.lblPrize.Name = "lblPrize";
 			this.lblPrize.Size = new System.Drawing.Size(89, 37);
 			this.lblPrize.TabIndex = 9;
@@ -132,7 +132,7 @@
 			// lblPrizeName
 			// 
 			this.lblPrizeName.AutoSize = true;
-			this.lblPrizeName.Location = new System.Drawing.Point(446, 520);
+			this.lblPrizeName.Location = new System.Drawing.Point(477, 520);
 			this.lblPrizeName.Name = "lblPrizeName";
 			this.lblPrizeName.Size = new System.Drawing.Size(0, 25);
 			this.lblPrizeName.TabIndex = 15;
@@ -140,7 +140,7 @@
 			// lblDescription
 			// 
 			this.lblDescription.AutoSize = true;
-			this.lblDescription.Location = new System.Drawing.Point(446, 579);
+			this.lblDescription.Location = new System.Drawing.Point(523, 579);
 			this.lblDescription.Name = "lblDescription";
 			this.lblDescription.Size = new System.Drawing.Size(0, 25);
 			this.lblDescription.TabIndex = 16;
@@ -148,7 +148,7 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(294, 579);
+			this.label1.Location = new System.Drawing.Point(380, 579);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(126, 25);
 			this.label1.TabIndex = 18;
@@ -157,7 +157,7 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(294, 520);
+			this.label2.Location = new System.Drawing.Point(380, 520);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(74, 25);
 			this.label2.TabIndex = 17;
@@ -167,7 +167,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(819, 897);
+			this.ClientSize = new System.Drawing.Size(699, 881);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.lblDescription);
@@ -183,6 +183,7 @@
 			this.Controls.Add(this.btnBack);
 			this.Name = "frmAwardPrize";
 			this.Text = "frmAwardPrize";
+			this.Load += new System.EventHandler(this.frmAwardPrize_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

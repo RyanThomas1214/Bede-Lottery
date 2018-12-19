@@ -19,7 +19,7 @@ namespace Bede.Lottery.Data
         public string PrizeDraw { get; set; }
         public int PrizeId { get; set; }
     
-        public virtual Employee Employee { get; set; }
-        public virtual Prize Prize { get; set; }
+        public virtual Core.Models.Employee Employee { get; set; }
+        public virtual Core.Models.Prize Prize { get; set; }
     }
 }

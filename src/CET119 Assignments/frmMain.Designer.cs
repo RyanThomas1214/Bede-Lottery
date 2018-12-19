@@ -29,21 +29,11 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			this.btnHelp = new System.Windows.Forms.Button();
 			this.btnPickWinner = new System.Windows.Forms.Button();
 			this.btnPreviousWinners = new System.Windows.Forms.Button();
 			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.lblTitle = new System.Windows.Forms.Label();
 			this.SuspendLayout();
-			// 
-			// btnHelp
-			// 
-			this.btnHelp.Location = new System.Drawing.Point(1487, 47);
-			this.btnHelp.Name = "btnHelp";
-			this.btnHelp.Size = new System.Drawing.Size(81, 70);
-			this.btnHelp.TabIndex = 0;
-			this.btnHelp.Text = "HELP";
-			this.btnHelp.UseVisualStyleBackColor = true;
 			// 
 			// btnPickWinner
 			// 
@@ -91,7 +81,6 @@
 			this.Controls.Add(this.lblTitle);
 			this.Controls.Add(this.btnPreviousWinners);
 			this.Controls.Add(this.btnPickWinner);
-			this.Controls.Add(this.btnHelp);
 			this.Name = "frmMain";
 			this.Text = "Form1";
 			this.ResumeLayout(false);
@@ -100,8 +89,6 @@
 		}
 
 		#endregion
-
-		private System.Windows.Forms.Button btnHelp;
 		private System.Windows.Forms.Button btnPickWinner;
 		private System.Windows.Forms.Button btnPreviousWinners;
 		private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;

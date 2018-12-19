@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Bede.Lottery.Core.Interfaces;
 using Bede.Lottery.Core.Models;
@@ -17,6 +18,24 @@ namespace Bede.Lottery.Data.Repositories
 				Winner winner = context.Winners.Where(p => p.Id == id).FirstOrDefault();
 				return ConvertFromTableToBusinessObject(winner);
 			}
+		}
+
+		public List<ModelWinner> GetWinners(int skip, int take)
+		{
+			List<ModelWinner> winners = new List<ModelWinner>();
+
+			using (var context = new bedelotteryEntities())
+			{
+				winners = context.Winners.Select( e=> new ModelWinner
+				{
+					Id = e.Id,
+					WinningEmployee = e.Employee,
+					WinningPrize = e.Prize
+					//code to map
+				}).Skip(skip).Take(take).ToList();
+			}
+
+			return winners;
 		}
 
 		private ModelWinner ConvertFromTableToBusinessObject(Winner winner)

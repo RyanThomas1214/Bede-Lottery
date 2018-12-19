@@ -49,5 +49,10 @@ namespace Bede.Lottery.Core.Interfaces
 		{
 			throw new NotImplementedException();
 		}
+
+		public List<Winner> GetWinners(int skip = 0, int take = 10)
+		{
+			var winners = _winnersRepository.GetWinners(skip, take);
+		}
 	}
 }
