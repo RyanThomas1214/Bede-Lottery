@@ -1,43 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CET119_Assignments
+namespace Bede.Lottery.Forms.UI
 {
-	public partial class Form1 : Form
+	public partial class AwardPrizeControl : UserControl
 	{
-		public Form1()
+		public AwardPrizeControl()
 		{
 			InitializeComponent();
-		}
-
-		private void button1_Click(object sender, EventArgs e)
-		{
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		}
 	}
 }
