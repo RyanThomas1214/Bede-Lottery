@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using Bede.Lottery.Core.Interfaces.Repositories;
-using Bede.Lottery.Core.Models;
 using Bede.Lottery.Core.Interfaces.Services;
+using Bede.Lottery.Core.Models;
 
-namespace Bede.Lottery.Core
+namespace Bede.Lottery.Service
 {
 	public class EmployeeService : IEmployeeService
 	{

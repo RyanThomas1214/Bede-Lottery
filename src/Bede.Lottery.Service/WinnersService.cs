@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Bede.Lottery.Core.Interfaces.Repositories;
-using Bede.Lottery.Core.Models;
 using Bede.Lottery.Core.Interfaces.Services;
+using Bede.Lottery.Core.Models;
 
-namespace Bede.Lottery.Core.Interfaces
+namespace Bede.Lottery.Service
 {
 	public class WinnersService : IWinnersService
 	{
@@ -53,6 +50,7 @@ namespace Bede.Lottery.Core.Interfaces
 		public List<Winner> GetWinners(int skip = 0, int take = 10)
 		{
 			var winners = _winnersRepository.GetWinners(skip, take);
+		    return winners;
 		}
 	}
 }

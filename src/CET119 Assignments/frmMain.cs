@@ -1,16 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Bede.Lottery.Core.Interfaces.Services;
-using Bede.Lottery.Forms.UI;
 
-namespace CET119_Assignments
+namespace Bede.Lottery.Forms.UI
 {
 	public partial class frmMain : Form
 	{

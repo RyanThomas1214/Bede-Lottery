@@ -1,4 +1,4 @@
-﻿namespace CET119_Assignments
+﻿namespace Bede.Lottery.Forms.UI
 {
 	partial class frmMain
 	{

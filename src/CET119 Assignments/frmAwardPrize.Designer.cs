@@ -42,13 +42,14 @@
 			this.lblDescription = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
+			this.btnSave = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// btnBack
 			// 
 			this.btnBack.Location = new System.Drawing.Point(27, 33);
 			this.btnBack.Name = "btnBack";
-			this.btnBack.Size = new System.Drawing.Size(117, 63);
+			this.btnBack.Size = new System.Drawing.Size(150, 49);
 			this.btnBack.TabIndex = 0;
 			this.btnBack.Text = "BACK";
 			this.btnBack.UseVisualStyleBackColor = true;
@@ -163,11 +164,21 @@
 			this.label2.TabIndex = 17;
 			this.label2.Text = "Name:";
 			// 
+			// btnSave
+			// 
+			this.btnSave.Location = new System.Drawing.Point(250, 676);
+			this.btnSave.Name = "btnSave";
+			this.btnSave.Size = new System.Drawing.Size(150, 49);
+			this.btnSave.TabIndex = 19;
+			this.btnSave.Text = "SAVE";
+			this.btnSave.UseVisualStyleBackColor = true;
+			// 
 			// frmAwardPrize
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(699, 881);
+			this.Controls.Add(this.btnSave);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.lblDescription);
@@ -205,5 +216,6 @@
 		private System.Windows.Forms.Label lblDescription;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Button btnSave;
 	}
 }
