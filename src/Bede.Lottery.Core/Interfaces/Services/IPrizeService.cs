@@ -4,7 +4,8 @@ namespace Bede.Lottery.Core.Interfaces.Services
 {
 	public interface IPrizeService
 	{
-		Prize GetPrize(int id);
+		
 		Prize GetRandomPrize();
+		void AddPrize(string name, string description);
 	}
 }

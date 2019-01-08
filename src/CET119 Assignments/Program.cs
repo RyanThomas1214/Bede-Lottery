@@ -37,6 +37,8 @@ namespace Bede.Lottery.Forms.UI
 			builder.RegisterType<frmMain>();
 			builder.RegisterType<frmAwardPrize>();
 			builder.RegisterType<frmHistory>();
+			builder.RegisterType<frmAddUser>();
+			builder.RegisterType<frmAddPrize>();
 
 			//register data providers
 			builder.RegisterType<PrizeRepository>().As<IPrizeRepository>();

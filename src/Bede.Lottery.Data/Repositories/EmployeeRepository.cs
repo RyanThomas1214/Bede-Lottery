@@ -24,5 +24,29 @@ namespace Bede.Lottery.Data.Repositories
                 return context.Employees.Select(p => new ModelEmployee { Id = p.Id, Name = p.Name }).ToList();
             }
         }
-    }
+
+	    public void AddEmployee(string name)
+	    
+			{
+				// connect to db
+				using (var context = new bedelotteryEntities())
+				{
+					// create new row entry
+					Employee dbEmployee = new Employee
+					{
+						
+						Name = name
+
+					};
+
+					// add to table
+					context.Employees.Add(dbEmployee);
+
+					// save db changes
+					context.SaveChanges();
+				}
+			}
+
+		
+	}
 }

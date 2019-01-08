@@ -30,19 +30,13 @@
 		{
 			this.btnBack = new System.Windows.Forms.Button();
 			this.btnGenerate = new System.Windows.Forms.Button();
-			this.lblEmployee = new System.Windows.Forms.Label();
 			this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
-			this.lblPrize = new System.Windows.Forms.Label();
 			this.lblTitle = new System.Windows.Forms.Label();
-			this.lblNameTag = new System.Windows.Forms.Label();
-			this.lblIdTag = new System.Windows.Forms.Label();
-			this.lblId = new System.Windows.Forms.Label();
-			this.lblName = new System.Windows.Forms.Label();
-			this.lblPrizeName = new System.Windows.Forms.Label();
-			this.lblDescription = new System.Windows.Forms.Label();
-			this.label1 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
 			this.btnSave = new System.Windows.Forms.Button();
+			this.txtNumber = new System.Windows.Forms.TextBox();
+			this.lblNumber = new System.Windows.Forms.Label();
+			this.dgvWinners = new System.Windows.Forms.DataGridView();
+			((System.ComponentModel.ISupportInitialize)(this.dgvWinners)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// btnBack
@@ -58,33 +52,13 @@
 			// btnGenerate
 			// 
 			this.btnGenerate.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnGenerate.Location = new System.Drawing.Point(168, 253);
+			this.btnGenerate.Location = new System.Drawing.Point(341, 253);
 			this.btnGenerate.Name = "btnGenerate";
 			this.btnGenerate.Size = new System.Drawing.Size(346, 77);
 			this.btnGenerate.TabIndex = 3;
 			this.btnGenerate.Text = "Generate";
 			this.btnGenerate.UseVisualStyleBackColor = true;
 			this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
-			// 
-			// lblEmployee
-			// 
-			this.lblEmployee.AutoSize = true;
-			this.lblEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblEmployee.Location = new System.Drawing.Point(20, 443);
-			this.lblEmployee.Name = "lblEmployee";
-			this.lblEmployee.Size = new System.Drawing.Size(157, 37);
-			this.lblEmployee.TabIndex = 6;
-			this.lblEmployee.Text = "Employee";
-			// 
-			// lblPrize
-			// 
-			this.lblPrize.AutoSize = true;
-			this.lblPrize.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblPrize.Location = new System.Drawing.Point(378, 443);
-			this.lblPrize.Name = "lblPrize";
-			this.lblPrize.Size = new System.Drawing.Size(89, 37);
-			this.lblPrize.TabIndex = 9;
-			this.lblPrize.Text = "Prize";
 			// 
 			// lblTitle
 			// 
@@ -96,105 +70,61 @@
 			this.lblTitle.TabIndex = 10;
 			this.lblTitle.Text = "Bede Lottery Winner";
 			// 
-			// lblNameTag
-			// 
-			this.lblNameTag.AutoSize = true;
-			this.lblNameTag.Location = new System.Drawing.Point(22, 579);
-			this.lblNameTag.Name = "lblNameTag";
-			this.lblNameTag.Size = new System.Drawing.Size(80, 25);
-			this.lblNameTag.TabIndex = 11;
-			this.lblNameTag.Text = "Name: ";
-			// 
-			// lblIdTag
-			// 
-			this.lblIdTag.AutoSize = true;
-			this.lblIdTag.Location = new System.Drawing.Point(22, 520);
-			this.lblIdTag.Name = "lblIdTag";
-			this.lblIdTag.Size = new System.Drawing.Size(35, 25);
-			this.lblIdTag.TabIndex = 12;
-			this.lblIdTag.Text = "Id:";
-			// 
-			// lblId
-			// 
-			this.lblId.AutoSize = true;
-			this.lblId.Location = new System.Drawing.Point(121, 520);
-			this.lblId.Name = "lblId";
-			this.lblId.Size = new System.Drawing.Size(0, 25);
-			this.lblId.TabIndex = 14;
-			// 
-			// lblName
-			// 
-			this.lblName.AutoSize = true;
-			this.lblName.Location = new System.Drawing.Point(121, 579);
-			this.lblName.Name = "lblName";
-			this.lblName.Size = new System.Drawing.Size(0, 25);
-			this.lblName.TabIndex = 13;
-			// 
-			// lblPrizeName
-			// 
-			this.lblPrizeName.AutoSize = true;
-			this.lblPrizeName.Location = new System.Drawing.Point(477, 520);
-			this.lblPrizeName.Name = "lblPrizeName";
-			this.lblPrizeName.Size = new System.Drawing.Size(0, 25);
-			this.lblPrizeName.TabIndex = 15;
-			// 
-			// lblDescription
-			// 
-			this.lblDescription.AutoSize = true;
-			this.lblDescription.Location = new System.Drawing.Point(523, 579);
-			this.lblDescription.Name = "lblDescription";
-			this.lblDescription.Size = new System.Drawing.Size(0, 25);
-			this.lblDescription.TabIndex = 16;
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(380, 579);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(126, 25);
-			this.label1.TabIndex = 18;
-			this.label1.Text = "Description:";
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(380, 520);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(74, 25);
-			this.label2.TabIndex = 17;
-			this.label2.Text = "Name:";
-			// 
 			// btnSave
 			// 
-			this.btnSave.Location = new System.Drawing.Point(250, 676);
+			this.btnSave.Location = new System.Drawing.Point(262, 677);
 			this.btnSave.Name = "btnSave";
 			this.btnSave.Size = new System.Drawing.Size(150, 49);
 			this.btnSave.TabIndex = 19;
 			this.btnSave.Text = "SAVE";
 			this.btnSave.UseVisualStyleBackColor = true;
+			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+			// 
+			// txtNumber
+			// 
+			this.txtNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtNumber.Location = new System.Drawing.Point(235, 270);
+			this.txtNumber.Name = "txtNumber";
+			this.txtNumber.Size = new System.Drawing.Size(100, 49);
+			this.txtNumber.TabIndex = 20;
+			this.txtNumber.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+			// 
+			// lblNumber
+			// 
+			this.lblNumber.AutoSize = true;
+			this.lblNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblNumber.Location = new System.Drawing.Point(12, 270);
+			this.lblNumber.Name = "lblNumber";
+			this.lblNumber.Size = new System.Drawing.Size(217, 37);
+			this.lblNumber.TabIndex = 21;
+			this.lblNumber.Text = "Enter Number";
+			// 
+			// dgvWinners
+			// 
+			this.dgvWinners.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dgvWinners.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvWinners.Location = new System.Drawing.Point(13, 408);
+			this.dgvWinners.Name = "dgvWinners";
+			this.dgvWinners.RowTemplate.Height = 33;
+			this.dgvWinners.Size = new System.Drawing.Size(657, 228);
+			this.dgvWinners.TabIndex = 22;
 			// 
 			// frmAwardPrize
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(699, 881);
+			this.Controls.Add(this.dgvWinners);
+			this.Controls.Add(this.lblNumber);
+			this.Controls.Add(this.txtNumber);
 			this.Controls.Add(this.btnSave);
-			this.Controls.Add(this.label1);
-			this.Controls.Add(this.label2);
-			this.Controls.Add(this.lblDescription);
-			this.Controls.Add(this.lblPrizeName);
-			this.Controls.Add(this.lblId);
-			this.Controls.Add(this.lblName);
-			this.Controls.Add(this.lblIdTag);
-			this.Controls.Add(this.lblNameTag);
 			this.Controls.Add(this.lblTitle);
-			this.Controls.Add(this.lblPrize);
-			this.Controls.Add(this.lblEmployee);
 			this.Controls.Add(this.btnGenerate);
 			this.Controls.Add(this.btnBack);
 			this.Name = "frmAwardPrize";
 			this.Text = "frmAwardPrize";
 			this.Load += new System.EventHandler(this.frmAwardPrize_Load);
+			((System.ComponentModel.ISupportInitialize)(this.dgvWinners)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -204,18 +134,11 @@
 
 		private System.Windows.Forms.Button btnBack;
 		private System.Windows.Forms.Button btnGenerate;
-		private System.Windows.Forms.Label lblEmployee;
 		private System.DirectoryServices.DirectoryEntry directoryEntry1;
-		private System.Windows.Forms.Label lblPrize;
 		private System.Windows.Forms.Label lblTitle;
-		private System.Windows.Forms.Label lblNameTag;
-		private System.Windows.Forms.Label lblIdTag;
-		private System.Windows.Forms.Label lblId;
-		private System.Windows.Forms.Label lblName;
-		private System.Windows.Forms.Label lblPrizeName;
-		private System.Windows.Forms.Label lblDescription;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Button btnSave;
+		private System.Windows.Forms.TextBox txtNumber;
+		private System.Windows.Forms.Label lblNumber;
+		private System.Windows.Forms.DataGridView dgvWinners;
 	}
 }

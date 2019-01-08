@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bede.Lottery.Data.Sql", "Be
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bede.Lottery.Core", "Bede.Lottery.Core\Bede.Lottery.Core.csproj", "{6D21E023-F774-47A9-8032-90759BF1607A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bede.Lottery.UnitTests", "Bede.Lottery.UnitTests\Bede.Lottery.UnitTests.csproj", "{812B32DF-0938-4644-BC98-C44836201003}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{6D21E023-F774-47A9-8032-90759BF1607A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D21E023-F774-47A9-8032-90759BF1607A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D21E023-F774-47A9-8032-90759BF1607A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{812B32DF-0938-4644-BC98-C44836201003}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{812B32DF-0938-4644-BC98-C44836201003}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{812B32DF-0938-4644-BC98-C44836201003}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{812B32DF-0938-4644-BC98-C44836201003}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

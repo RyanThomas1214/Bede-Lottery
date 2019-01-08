@@ -7,5 +7,6 @@ namespace Bede.Lottery.Core.Interfaces.Repositories
 	{
 		Winner GetWinner(int id);
 		List<Winner> GetWinners(int skip, int take);
+		void AddWinner(Winner winner);
 	}
 }

@@ -7,11 +7,15 @@ namespace Bede.Lottery.Forms.UI
 	{
 		private readonly frmAwardPrize _awardsForm;
 		private readonly frmHistory _historyForm;
+		private readonly frmAddUser _addUserForm;
+		private readonly frmAddPrize _addPrizeForm;
 
-		public frmMain(frmAwardPrize awardsForm, frmHistory historyForm)
+		public frmMain(frmAwardPrize awardsForm, frmHistory historyForm, frmAddUser addUserForm, frmAddPrize addPrizeForm)
 		{
 			_awardsForm = awardsForm;
 			_historyForm = historyForm;
+			_addUserForm = addUserForm;
+			_addPrizeForm = addPrizeForm;
 			InitializeComponent();
 		}
 
@@ -26,6 +30,20 @@ namespace Bede.Lottery.Forms.UI
 		{
 			this.Hide();
 			_historyForm.ShowDialog();
+			this.Show();
+		}
+
+		private void btnAddUser_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			_addUserForm.ShowDialog(this);
+			this.Show();
+		}
+
+		private void btnAddPrize_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			_addPrizeForm.ShowDialog(this);
 			this.Show();
 		}
 	}

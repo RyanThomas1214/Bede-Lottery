@@ -46,5 +46,25 @@ namespace Bede.Lottery.Data.Repositories
 
             return winners;
         }
+
+	    public void AddWinner(ModelWinner winner)
+	    {
+			using (var context = new bedelotteryEntities())
+			{
+				// create new row entry
+				Winner dbWinner = new Winner
+				{
+					EmployeeId = winner.WinningEmployee.Id,
+					PrizeId = winner.WinningPrize.Id,
+					PrizeDraw = winner.PrizeDraw
+				};
+
+				// add to table
+				context.Winners.Add(dbWinner);
+
+				// save db changes
+				context.SaveChanges();
+				}
+		}
     }
 }

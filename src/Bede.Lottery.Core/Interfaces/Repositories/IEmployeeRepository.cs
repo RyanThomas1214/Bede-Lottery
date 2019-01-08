@@ -7,5 +7,6 @@ namespace Bede.Lottery.Core.Interfaces.Repositories
 	{
 		Employee GetEmployee(int id);
 		IEnumerable<Employee> GetAll();
+		void AddEmployee(string name);
 	}
 }

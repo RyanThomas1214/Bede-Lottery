@@ -57,11 +57,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAddPrize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddPrize.Designer.cs">
+      <DependentUpon>frmAddPrize.cs</DependentUpon>
+    </Compile>
     <Compile Include="AwardPrizeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="AwardPrizeControl.Designer.cs">
       <DependentUpon>AwardPrizeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddUser.Designer.cs">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAwardPrize.cs">
       <SubType>Form</SubType>
@@ -83,8 +95,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAddPrize.resx">
+      <DependentUpon>frmAddPrize.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AwardPrizeControl.resx">
       <DependentUpon>AwardPrizeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddUser.resx">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAwardPrize.resx">
       <DependentUpon>frmAwardPrize.cs</DependentUpon>
