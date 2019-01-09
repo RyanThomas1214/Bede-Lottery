@@ -77,7 +77,10 @@ namespace Bede.Lottery.Data.Repositories
 
 		List<ModelPrize> IPrizeRepository.GetRandomPrize()
 		{
-			throw new NotImplementedException();
+			using (var context = new bedelotteryEntities())
+			{
+				return context.Employees.Select(p => new ModelPrize { Id = p.Id, Name = p.Name }).ToList();
+			}
 		}
 	}
 }
