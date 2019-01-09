@@ -1,26 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using Bede.Lottery.Core.Interfaces.Services;
 using Bede.Lottery.Core.Models;
-using CET119_Assignments;
 
 namespace Bede.Lottery.Forms.UI
 {
 	public partial class frmAwardPrize : Form
 	{
 		private IWinnersService _winnersService;
+		private List<Winner> _winners;
 
 		public frmAwardPrize(IWinnersService winnersService)
 		{
 			_winnersService = winnersService;
 			InitializeComponent();
+			_winners = new List<Winner>();
+
+			dgvWinners.DataSource = _winners;
 		}
 
 		private void btnBack_Click(object sender, EventArgs e)
@@ -30,18 +29,55 @@ namespace Bede.Lottery.Forms.UI
 
 		private void btnGenerate_Click(object sender, EventArgs e)
 		{
-			var winner = _winnersService.ChooseWinner();
-			
-			//populate employee
-			lblName.Text = winner.WinningEmployee.Name;
-			lblId.Text = winner.WinningEmployee.Id.ToString();
+			//empty list
+			_winners = new List<Winner>();
 
-			//populate prize
-			lblPrizeName.Text = winner.WinningPrize.Name;
-			lblDescription.Text = winner.WinningPrize.Description;
+			//get required amount of prizes
+			int prizesToAward;
+			if (!int.TryParse(txtNumber.Text, out prizesToAward))
+			{
+				MessageBox.Show("Please enter a valid number");
+				return;
+			}
+
+			// randomly select prizes
+			for (var i = 0; i < prizesToAward; i++)
+			{
+				var winner = _winnersService.ChooseWinner();
+				_winners.Add(winner);
+			}
+
+			// update data grid
+			dgvWinners.DataSource = typeof(List<Winner>);
+			dgvWinners.DataSource = _winners;
+
 		}
 
+
 		private void frmAwardPrize_Load(object sender, EventArgs e)
+		{
+
+		}
+
+		private void btnSave_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				foreach (var winner in _winners)
+				{
+					_winnersService.AddWinner(winner);
+				}
+			
+				MessageBox.Show($"Added {_winners.Count} new winners!");
+
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Unable to save Prize, Please try again. \r\n Detail:" + ex.Message);
+			}
+		}
+
+		private void textBox1_TextChanged(object sender, EventArgs e)
 		{
 
 		}

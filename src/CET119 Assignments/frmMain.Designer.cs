@@ -1,4 +1,4 @@
-﻿namespace CET119_Assignments
+﻿namespace Bede.Lottery.Forms.UI
 {
 	partial class frmMain
 	{
@@ -33,12 +33,14 @@
 			this.btnPreviousWinners = new System.Windows.Forms.Button();
 			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.lblTitle = new System.Windows.Forms.Label();
+			this.btnAddUser = new System.Windows.Forms.Button();
+			this.btnAddPrize = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// btnPickWinner
 			// 
 			this.btnPickWinner.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnPickWinner.Location = new System.Drawing.Point(40, 381);
+			this.btnPickWinner.Location = new System.Drawing.Point(52, 227);
 			this.btnPickWinner.Name = "btnPickWinner";
 			this.btnPickWinner.Size = new System.Drawing.Size(713, 212);
 			this.btnPickWinner.TabIndex = 1;
@@ -49,7 +51,7 @@
 			// btnPreviousWinners
 			// 
 			this.btnPreviousWinners.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnPreviousWinners.Location = new System.Drawing.Point(855, 381);
+			this.btnPreviousWinners.Location = new System.Drawing.Point(867, 227);
 			this.btnPreviousWinners.Name = "btnPreviousWinners";
 			this.btnPreviousWinners.Size = new System.Drawing.Size(713, 212);
 			this.btnPreviousWinners.TabIndex = 2;
@@ -73,11 +75,35 @@
 			this.lblTitle.TabIndex = 4;
 			this.lblTitle.Text = "Bede Lottery";
 			// 
+			// btnAddUser
+			// 
+			this.btnAddUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnAddUser.Location = new System.Drawing.Point(52, 541);
+			this.btnAddUser.Name = "btnAddUser";
+			this.btnAddUser.Size = new System.Drawing.Size(713, 212);
+			this.btnAddUser.TabIndex = 5;
+			this.btnAddUser.Text = "Add User";
+			this.btnAddUser.UseVisualStyleBackColor = true;
+			this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
+			// 
+			// btnAddPrize
+			// 
+			this.btnAddPrize.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnAddPrize.Location = new System.Drawing.Point(867, 541);
+			this.btnAddPrize.Name = "btnAddPrize";
+			this.btnAddPrize.Size = new System.Drawing.Size(713, 212);
+			this.btnAddPrize.TabIndex = 6;
+			this.btnAddPrize.Text = "Add Prize";
+			this.btnAddPrize.UseVisualStyleBackColor = true;
+			this.btnAddPrize.Click += new System.EventHandler(this.btnAddPrize_Click);
+			// 
 			// frmMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1616, 854);
+			this.Controls.Add(this.btnAddPrize);
+			this.Controls.Add(this.btnAddUser);
 			this.Controls.Add(this.lblTitle);
 			this.Controls.Add(this.btnPreviousWinners);
 			this.Controls.Add(this.btnPickWinner);
@@ -93,6 +119,8 @@
 		private System.Windows.Forms.Button btnPreviousWinners;
 		private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
 		private System.Windows.Forms.Label lblTitle;
+		private System.Windows.Forms.Button btnAddUser;
+		private System.Windows.Forms.Button btnAddPrize;
 	}
 }
 

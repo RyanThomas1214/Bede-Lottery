@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Autofac;
-using Bede.Lottery.Core;
-using Bede.Lottery.Core.Interfaces;
 using Bede.Lottery.Core.Interfaces.Repositories;
 using Bede.Lottery.Core.Interfaces.Services;
 using Bede.Lottery.Data.Repositories;
-using Bede.Lottery.Forms.UI;
+using Bede.Lottery.Service;
 
-namespace CET119_Assignments
+namespace Bede.Lottery.Forms.UI
 {
 	static class Program
 	{
@@ -42,6 +37,8 @@ namespace CET119_Assignments
 			builder.RegisterType<frmMain>();
 			builder.RegisterType<frmAwardPrize>();
 			builder.RegisterType<frmHistory>();
+			builder.RegisterType<frmAddUser>();
+			builder.RegisterType<frmAddPrize>();
 
 			//register data providers
 			builder.RegisterType<PrizeRepository>().As<IPrizeRepository>();

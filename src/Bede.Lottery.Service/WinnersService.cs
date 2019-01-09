@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Bede.Lottery.Core.Interfaces.Repositories;
-using Bede.Lottery.Core.Models;
 using Bede.Lottery.Core.Interfaces.Services;
+using Bede.Lottery.Core.Models;
 
-namespace Bede.Lottery.Core.Interfaces
+namespace Bede.Lottery.Service
 {
 	public class WinnersService : IWinnersService
 	{
@@ -24,9 +21,9 @@ namespace Bede.Lottery.Core.Interfaces
 		public Winner ChooseWinner()
 		{
 			// generate prize draw ID (in future multiple winners may be needed and need to be tied together)
-			var drawId = new Guid().ToString();
+			var drawId = Guid.NewGuid().ToString();
 
-			// pick employee,
+			// pick employee
 			var employee = _employeeService.GetRandomEmployee();
 			//pick prize
 			var prize = _prizeService.GetRandomPrize();
@@ -34,25 +31,41 @@ namespace Bede.Lottery.Core.Interfaces
 			var winner = new Winner
 			{
 				PrizeDraw = drawId,
-				WinningEmployee=employee,
+				WinningEmployee= employee,
 				WinningPrize = prize
 			};
 			return winner;
 		}
 
-		public Winner GetWinner(int id)
-		{
-			throw new NotImplementedException();
-		}
-
-		public List<Winner> GetWinnersFromDraw(string prizeDraw)
-		{
-			throw new NotImplementedException();
-		}
 
 		public List<Winner> GetWinners(int skip = 0, int take = 10)
 		{
-			var winners = _winnersRepository.GetWinners(skip, take);
+			try
+			{
+				var winners = _winnersRepository.GetWinners(skip, take);
+				return winners;
+			}
+			catch (Exception e)
+			{
+				var exception = new Exception("There was an error getting a new Winner, please try again", e);
+				throw exception;
+			}
+
+
+		}
+
+		public void AddWinner(Winner winner)
+		{
+			try
+			{
+				_winnersRepository.AddWinner(winner);
+			}
+			catch (Exception e)
+			{
+				var exception = new Exception("There was an error adding a new Winner, please try again", e);
+				throw exception;
+			}
+			
 		}
 	}
 }

@@ -1,26 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Bede.Lottery.Core.Interfaces.Services;
-using Bede.Lottery.Forms.UI;
 
-namespace CET119_Assignments
+namespace Bede.Lottery.Forms.UI
 {
 	public partial class frmMain : Form
 	{
 		private readonly frmAwardPrize _awardsForm;
 		private readonly frmHistory _historyForm;
+		private readonly frmAddUser _addUserForm;
+		private readonly frmAddPrize _addPrizeForm;
 
-		public frmMain(frmAwardPrize awardsForm, frmHistory historyForm)
+		public frmMain(frmAwardPrize awardsForm, frmHistory historyForm, frmAddUser addUserForm, frmAddPrize addPrizeForm)
 		{
 			_awardsForm = awardsForm;
 			_historyForm = historyForm;
+			_addUserForm = addUserForm;
+			_addPrizeForm = addPrizeForm;
 			InitializeComponent();
 		}
 
@@ -35,6 +30,20 @@ namespace CET119_Assignments
 		{
 			this.Hide();
 			_historyForm.ShowDialog();
+			this.Show();
+		}
+
+		private void btnAddUser_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			_addUserForm.ShowDialog(this);
+			this.Show();
+		}
+
+		private void btnAddPrize_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			_addPrizeForm.ShowDialog(this);
 			this.Show();
 		}
 	}

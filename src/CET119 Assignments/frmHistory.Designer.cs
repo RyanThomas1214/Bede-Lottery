@@ -39,7 +39,7 @@
 			// 
 			this.btnBack.Location = new System.Drawing.Point(12, 12);
 			this.btnBack.Name = "btnBack";
-			this.btnBack.Size = new System.Drawing.Size(83, 77);
+			this.btnBack.Size = new System.Drawing.Size(175, 65);
 			this.btnBack.TabIndex = 1;
 			this.btnBack.Text = "BACK";
 			this.btnBack.UseVisualStyleBackColor = true;
@@ -68,6 +68,7 @@
 			// 
 			// dgvWinners
 			// 
+			this.dgvWinners.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvWinners.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvWinners.Location = new System.Drawing.Point(138, 368);
 			this.dgvWinners.Name = "dgvWinners";

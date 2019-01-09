@@ -32,7 +32,7 @@ namespace Bede.Lottery.Data.Repositories
 					WinningEmployee = e.Employee,
 					WinningPrize = e.Prize
 					//code to map
-				}).Skip(skip).Take(take).ToList();
+				}).OrderBy(e=>e.Id).Skip(skip).Take(take).ToList();
 			}
 
 			return winners;

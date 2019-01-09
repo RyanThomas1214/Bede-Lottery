@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bede.Lottery.Core.Interfaces.Services;
-using CET119_Assignments;
 
 namespace Bede.Lottery.Forms.UI
 {
@@ -29,17 +21,18 @@ namespace Bede.Lottery.Forms.UI
 
 		private void btnGenerate_Click(object sender, EventArgs e)
 		{
-
+		    RefreshData();
 		}
 
 		private void frmHistory_Load(object sender, EventArgs e)
 		{
-			//Get previous Winners
-			var winners = _winnersService.GetWinners();
-			//bind the collection to data grid
-			//update UI?
-
-
+		    RefreshData();
 		}
+
+	    void RefreshData()
+	    {
+	        var winners = _winnersService.GetWinners();
+	        dgvWinners.DataSource = winners;
+	    }
 	}
 }
