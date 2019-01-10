@@ -75,11 +75,11 @@ namespace Bede.Lottery.Data.Repositories
 			}
 		}
 
-		List<ModelPrize> IPrizeRepository.GetRandomPrize()
+		List<ModelPrize> IPrizeRepository.GetAllPrizes()
 		{
 			using (var context = new bedelotteryEntities())
 			{
-				return context.Employees.Select(p => new ModelPrize { Id = p.Id, Name = p.Name }).ToList();
+				return context.Prizes.Select(p => new ModelPrize { Id = p.Id, Name = p.Name }).ToList();
 			}
 		}
 	}

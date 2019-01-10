@@ -6,7 +6,7 @@ namespace Bede.Lottery.Core.Interfaces.Repositories
 	public interface IPrizeRepository
 	{
 		Prize GetPrize(int id);
-		List<Prize> GetRandomPrize();
+		List<Prize> GetAllPrizes();
 		//Prize AddPrize(Prize prize);
 		Prize UpdatePrize(Prize prize);
 		void AddPrize(string name, string description);

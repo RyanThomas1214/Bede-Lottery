@@ -29,24 +29,24 @@ namespace Bede.Lottery.UnitTests
 		public void GetRandomPrizeShouldNotThrowException()
 		{
 			var mockRepository = new Mock<IPrizeRepository>();
-			mockRepository.Setup(repo => repo.GetRandomPrize()).Returns(PrizeList).Verifiable();
+			mockRepository.Setup(repo => repo.GetAllPrizes()).Returns(PrizeList).Verifiable();
 			var sut = new PrizeService(mockRepository.Object);
 
 			var prize = sut.GetRandomPrize();
 
 			Assert.That(prize != null);
-			mockRepository.Verify(e => e.GetRandomPrize(), Times.Once);
+			mockRepository.Verify(e => e.GetAllPrizes(), Times.Once);
 		}
 
 		[Test]
 		public void GetRandomPrizeShouldReturnAFriendlyErrorMessageWhenRepositoryThrowsException()
 		{
 			var mockRepository = new Mock<IPrizeRepository>();
-			mockRepository.Setup(repo => repo.GetRandomPrize()).Throws(new Exception("RepositoryError")).Verifiable();
+			mockRepository.Setup(repo => repo.GetAllPrizes()).Throws(new Exception("RepositoryError")).Verifiable();
 			var sut = new PrizeService(mockRepository.Object);
 
 			var thrownException = Assert.Throws<Exception>(() => sut.GetRandomPrize());
-			mockRepository.Verify(e => e.GetRandomPrize(), Times.Once);
+			mockRepository.Verify(e => e.GetAllPrizes(), Times.Once);
 			Assert.That(thrownException.Message == "There was an error getting Random Prize, please try again");
 		}
 

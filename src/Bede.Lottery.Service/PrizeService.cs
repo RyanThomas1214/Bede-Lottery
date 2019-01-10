@@ -19,7 +19,7 @@ namespace Bede.Lottery.Service
 		{
 			try
 			{
-				var prize = _prizeRepository.GetRandomPrize();
+				var prize = _prizeRepository.GetAllPrizes();
 				return prize.OrderBy(x => Guid.NewGuid()).FirstOrDefault();
 			}
 			catch (Exception e)
